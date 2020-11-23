@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="XamarinFormsSdk" />
+    <!--#if (IncludeXamarinEssentials) -->
+    <PackageReference Include="Xamarin.Essentials" Version="XamarinEssentialsSdk" />
+    <!--#endif -->
+    <PackageReference Include="Resizetizer.NT" Version="ResizetizerSdk" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="XamarinCommunityToolkitSdk" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Common\Fonts\fa-solid-900.ttf" />
+    <EmbeddedResource Include="Common\Fonts\RobotoMono-Regular.ttf" />
+    <EmbeddedResource Include="Common\Fonts\ProductSans-Regular.ttf" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pm="clr-namespace:NewApp.PageModels"
+             x:Class="NewApp.Pages.MainPage">
+
+    <ContentPage.BindingContext>
+        <pm:MainPageModel />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="Auto,*">    
+        <Frame BackgroundColor="#512BD4" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout Margin="15" Grid.Row="1">
+            <Label Text="Start developing now" FontSize="Title" Padding="10"/>
+            <Label Text="Make changes to your XAML and save it to see your UI update in your running app. Give it a try!" FontSize="16" Padding="10,0,10,0"/>
+            <Label FontSize="16" Padding="10,24,10,0">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Learn more at "/>
+                            <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>    
+        </StackLayout>    
+    </Grid>
+
+</ContentPage>
