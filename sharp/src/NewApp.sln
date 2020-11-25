@@ -60,7 +60,5 @@ Global
 		{7FCB4590-5B53-4CF7-B00C-3722F34EB950}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FCB4590-5B53-4CF7-B00C-3722F34EB950}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{7FCB4590-5B53-4CF7-B00C-3722F34EB950}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{831e1ac1-ce35-4ccb-b081-3bbf254ce993}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{831e1ac1-ce35-4ccb-b081-3bbf254ce993}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

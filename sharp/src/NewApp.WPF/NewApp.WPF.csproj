@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ProjectGuid>{b1f03532-1c46-4bf0-9555-bc02aad19c07}</ProjectGuid>
+    <UseWPF>true</UseWPF>
+    <PublishTrimmed>true</PublishTrimmed>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="**\*.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms.Platform.WPF" Version="XamarinFormsSdk" />
+    <PackageReference Include="Resizetizer.NT" Version="ResizetizerSdk" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="XamarinCommunityToolkitSdk" />
+    <!--#if (IncludeLiveSharp)
+    <PackageReference Include="LiveSharp" Version="LiveSharpSdk" />
+    #endif -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NewApp\NewApp.csproj" />
+  </ItemGroup>
+
+</Project>

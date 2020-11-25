@@ -75,6 +75,10 @@
                 {
                     "choice": "desktop",
                     "description": "All projects with desktop targets"
+                },
+                {
+                    "choice": "sharp",
+                    "description": "All platforms with C# UI"
                 }
             ]
         },
@@ -164,6 +168,17 @@
             "dataType": "string",
             "replaces": "ResizetizerSdk",
             "defaultValue": "*-*"
+        },
+        "IncludeLiveSharp": {
+            "type": "parameter",
+            "dataType": "bool",
+            "defaultValue": "true"
+        },
+        "LiveSharpSdk": {
+            "type": "parameter",
+            "dataType": "string",
+            "replaces": "LiveSharpSdk",
+            "defaultValue": "*"
         },
         "ProjectID": {
             "type": "generated",
@@ -335,6 +350,54 @@
         {
             "source": "../quickstart/",
             "condition": "(kind == \"quickstart\")",
+            "modifiers": [
+                {
+                    "condition": "CreateSharedProject",
+                    "exclude": [
+                        "src/NewApp/NewApp.csproj"
+                    ]
+                },
+                {
+                    "condition": "(!CreateSharedProject)",
+                    "exclude": [
+                        "src/NewApp/NewApp.projitems"
+                    ]
+                },                
+                {
+                    "condition": "(!CreateiOSProject)",
+                    "exclude": [
+                        "src/NewApp.iOS/**/*"
+                    ]
+                },
+                {
+                    "condition": "(!CreateAndroidProject)",
+                    "exclude": [
+                        "src/NewApp.Android/**/*"
+                    ]
+                },
+                {
+                    "condition": "(!CreateUWPProject)",
+                    "exclude": [
+                        "src/NewApp.UWP/**/*"
+                    ]
+                },
+                {
+                    "condition": "(!CreateWPFProject)",
+                    "exclude": [
+                        "src/NewApp.WPF/**/*"
+                    ]
+                },
+                {
+                    "condition": "(!CreateMacProject)",
+                    "exclude": [
+                        "src/NewApp.macOS/**/*"
+                    ]
+                }
+            ]
+        },
+        {
+            "source": "../sharp/",
+            "condition": "(kind == \"sharp\")",
             "modifiers": [
                 {
                     "condition": "CreateSharedProject",

@@ -32,6 +32,9 @@ namespace NewApp.iOS
             #if (kind == "shell")
             global::Xamarin.Forms.Forms.SetFlags("CollectionView_Experimental");
             #endif
+            
+            UINavigationBar.Appearance.Translucent = false; // no alpha fade nonsense
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
